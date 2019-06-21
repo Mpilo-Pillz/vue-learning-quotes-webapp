@@ -3,10 +3,8 @@
        <form action="">
          <div class="col-sm-8 col sm offset-2 xs col-md-6 col-md-offset-3 form-group">
                 <label>Quote</label>
-                <textarea class="form-control" rows="3" v-model="quoteModel"></textarea>   
+                <textarea class="form-control" rows="3" v-model="quoteModelBinding"></textarea>   
          </div>
-       </form>
-        <form action="">
          <div class="col-sm-8 col sm offset-2 xs col-md-6 col-md-offset-3 form-group">
                 <button class="btn btn-primary" @click.prevent="createNew">Add Quote</button>
          </div>
@@ -19,13 +17,13 @@
 export default {
     data: function() {
         return {
-            quoteModel
+            quoteModelBinding: ''
         }
     },
     methods: {
         createNew(){
-            this.$emit('quoteAdded', this.quoteModel);
-            this.quoteModel = '';
+            this.$emit('quoteAdded', this.quoteModelBinding);
+            this.quoteModelBinding = '';
         }
     }
 }

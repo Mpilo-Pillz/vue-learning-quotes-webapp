@@ -12,3 +12,10 @@ npm run dev
 
 git rm src/.DS_Store --cache -r to remove if forgot to addd to git ignore
  git rm node_modules/ --cache -r
+
+echo "# vue-learning-forms" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Mpilo-Pillz/vue-learning-forms.git
+git push -u origin master

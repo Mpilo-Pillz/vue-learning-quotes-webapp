@@ -1,6 +1,15 @@
 <template>
+   <!-- <div class="row">
+       <app-quote v-for="(quote, index) in quotesProps" >{{ quote }}</app-quote>
+   </div>  -->
+
    <div class="row">
-       <app-quote v-for="(quote, index) in quotesProps" @click.native="deleteQuote(index)">{{ quote }}</app-quote>
+       <app-quote v-for="(quote, index) in quotesProps">{{ quote }}
+
+           <hr>
+           <button class="btn btn-danger deleteQuoteButton" @click="deleteQuote(index)">Delete Quote</button>
+
+       </app-quote>
    </div> 
 </template>
 
@@ -20,7 +29,9 @@ export default {
 </script>
 
 <style>
-
+    .deleteQuoteButton {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 </style>
 
 

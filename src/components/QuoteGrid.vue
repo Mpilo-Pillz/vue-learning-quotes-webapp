@@ -4,7 +4,9 @@
    </div>  -->
 
    <div class="row">
-       <app-quote v-for="(quote, index) in quotesProps">{{ quote }}
+       <app-quote 
+       v-for="(quote, index) in quotesProps"
+       v-bind:key="(quote, index)">{{ quote }}
 
            <hr>
            <button class="btn btn-danger deleteQuoteButton" @click="deleteQuote(index)">Delete Quote</button>
